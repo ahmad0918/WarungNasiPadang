@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "6881c6f6-16dd-45d0-b4b8-c4bfdbf319ba",
+		"name": "Warung Nasi Padang API",
+		"description": "Welcome To Warung Nasi Padang API documentations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23801607"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "auth",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"userpassword\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8012/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Table Menu",
+			"item": [
+				{
+					"name": "Create Menu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1ODIwNjgsImlhdCI6MTY2NjU4MjAwOCwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJhZG1pbiIsIkVtYWlsIjoiIn0.LmDgIMMOfhkqhPr8n3tL5TzIMwZn4pI3V8cDj_9Iq2w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Nasi\",\r\n    \"price\" : 13000,\r\n    \"stock\" : 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8012/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Menu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1ODIxNjEsImlhdCI6MTY2NjU4MjEwMSwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJhZG1pbiIsIkVtYWlsIjoiIn0.o8OqUXqTesH_xtywXfLZqhaP8oVKYVdnnOS7wEj2XZ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"91d5dc5c-84b9-45e9-b813-a1930a402bc2\",\r\n    \"name\": \"Nasi Goreng\",\r\n    \"price\": 13000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8012/menu/",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"menu",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Menu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1ODIyNTcsImlhdCI6MTY2NjU4MjE5NywiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJhZG1pbiIsIkVtYWlsIjoiIn0.VEPCredSyKvyL28Uc4q4RTNXRnj-UNrk6bF61emyrbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8012/menu/91d5dc5c-84b9-45e9-b813-a1930a402bc2",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"menu",
+								"91d5dc5c-84b9-45e9-b813-a1930a402bc2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Menu",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1ODIyNTcsImlhdCI6MTY2NjU4MjE5NywiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJhZG1pbiIsIkVtYWlsIjoiIn0.VEPCredSyKvyL28Uc4q4RTNXRnj-UNrk6bF61emyrbY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8012/menu",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Table Transaksi",
+			"item": [
+				{
+					"name": "Create Transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1ODI1MzUsImlhdCI6MTY2NjU4MjQ3NSwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJhZG1pbiIsIkVtYWlsIjoiIn0.bOxqSBLmF-ufcBthDiICKx4YAkSOtlkSf66rUw8q3bU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu\" : \"Ayam Bakar Padang\",\r\n    \"qunatity\" : 2,\r\n    \"date\" : \"2021-08-17T13:28:06.419Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8012/transaksi",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1ODI0NjksImlhdCI6MTY2NjU4MjQwOSwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJhZG1pbiIsIkVtYWlsIjoiIn0.cQ2hJXLTgU-X06waO8JFVhrFpk6AzluNDJzrdtjUXh0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"d40fd468-a131-4a8e-920f-c2752b2388d1\",\r\n    \"menu\": \"Ayam Bakar Padang\",\r\n    \"qunatity\": 1,\r\n    \"date\": \"2022-08-17T13:28:06.419Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8012/transaksi",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"transaksi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1ODI1ODIsImlhdCI6MTY2NjU4MjUyMiwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJhZG1pbiIsIkVtYWlsIjoiIn0.vE5Iq-ZmeLF3x3_OgCwwUJwldjtew1gQjljVgmXpkO8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8012/transaksi/1aced633-8ce0-48ca-b174-c9f2ed14bbca",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"transaksi",
+								"1aced633-8ce0-48ca-b174-c9f2ed14bbca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Transaksi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1ODI1ODIsImlhdCI6MTY2NjU4MjUyMiwiaXNzIjoiRU5JR01BIiwiVXNlcm5hbWUiOiJhZG1pbiIsIkVtYWlsIjoiIn0.vE5Iq-ZmeLF3x3_OgCwwUJwldjtew1gQjljVgmXpkO8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8012/transaksi",
+							"host": [
+								"localhost"
+							],
+							"port": "8012",
+							"path": [
+								"transaksi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
