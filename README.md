@@ -8,7 +8,7 @@
 ### Database
 
 ```sql
-CREATE DATABASE db_warung_nasi_pandang;
+CREATE DATABASE db_warung_nasi_padang;
 
 CREATE TABLE menu (
   id VARCHAR(100) PRIMARY KEY,

@@ -45,17 +45,7 @@ func (c Config) readConfigFile() Config {
 		ApiPort: "8012",
 		ApiHost: "localhost",
 	}
-	// c.DbConfig = DbConfig{
-	// 	Host:     os.Getenv("DB_HOST"),
-	// 	Port:     os.Getenv("DB_PORT"),
-	// 	Name:     os.Getenv("DB_NAME"),
-	// 	User:     os.Getenv("DB_USER"),
-	// 	Password: os.Getenv("DB_PASSWORD"),
-	// }
-	// c.ApiConfig = ApiConfig{
-	// 	ApiPort: os.Getenv("API_PORT"),
-	// 	ApiHost: os.Getenv("API_HOST"),
-	// }
+
 	c.TokenConfig = TokenConfig{
 		ApplicationName:     "ENIGMA",
 		JwtSignatureKey:     "P@ssword",

@@ -5,7 +5,6 @@ import (
 	"warung_nasi_padang/utils/authenticator"
 )
 
-
 type AuthUseCase interface {
 	UserAuth(user model.UserCredential)(token string, err error)
 }
